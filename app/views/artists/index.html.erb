@@ -1,0 +1,14 @@
+<h1 class="ui header"><strong>All Artists</strong></h1>
+<hr />
+<%= link_to "New Artist", new_artist_path %>
+<hr />
+<% @artists.each do |artist| %>
+  <h1><%= artist.artist %></h1>
+  <%= link_to "See Artist's Songs", artist_songs_path(artist) %>
+  <br />
+  <%= link_to "Show", artist_path(artist) %> |
+  <%= link_to "Edit", edit_artist_path(artist) %> |
+  <%= link_to "Delete", artist_path(artist), method: :delete %>
+<% end %>
+<br />
+<hr />
