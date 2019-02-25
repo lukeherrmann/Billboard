@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "artists#index"
+  root "boards#index"
 
   resources :boards do
     resources :songs

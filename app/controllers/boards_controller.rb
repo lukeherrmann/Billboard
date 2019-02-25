@@ -1,6 +1,6 @@
 class BoardsController < ApplicationController
   def index
-    @boards = Board.song.song_rank.sort_by
+    @songs = Song.all.sort_by { |v| v.song_rank}
   end
 
   def show

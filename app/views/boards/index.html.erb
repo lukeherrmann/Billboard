@@ -1,7 +1,12 @@
 <h1 class="ui header"><strong>Most Popular Songs</strong></h1>
 
 <hr />
-<%= @boards.each do |board| %>
+<% @songs.each do |song| %>
+<%= "#{song.song_rank}) #{song.song} by #{song.artist.artist}"%>
+<br />
 <% end %>
+
 <br />
 <hr />
+<p> To add a new song click on Artists in the top left corner.</p>
+<p>From there go See Artists's Songs->Add Song and input song info and rank.</p>
