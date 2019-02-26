@@ -48,6 +48,6 @@ class SongsController < ApplicationController
     end
 
     def song_params
-      params.require(:song).permit(:song,:song_rank)
+      params.require(:song).permit(:song,:board_id)
     end 
 end
