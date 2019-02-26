@@ -1,0 +1,13 @@
+
+<h4><%= @board.id ? 'Edit Billboard' : 'Create Billboard' %></h4>
+<hr />
+<%= form_with(model: @board, local: true, class: "ui form") do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true %>
+  <br />
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <br />
+  <br />
+  <%= f.submit nil, class: "ui button" %>
+<% end %>
